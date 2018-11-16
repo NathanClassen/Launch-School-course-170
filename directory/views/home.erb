@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reformed Confessions</title>
+
+    <!--link a stylesheet like this <link rel="stylesheet" href="stylesheets/pure-min.css"> -->
+</head>
+
+<body>
+  <div class='heading'>
+    <h1><strong>Reformed Confessions</strong></h1>
+  </div>
+
+  <div class='directory'>
+    <ul>
+      <% @files.each do |file| %>
+        <h2><a href="<%= file %>"><%= file.gsub(/(_|.pdf)/,' ') %></a></h2>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class='sort_button'>
+    <% if params[:sort] == "rev" %>
+        <h5><a href="/">Sort Aplphabetically</a></h5>
+    <% else %>
+        <h5><a href="/?sort=rev">Reverse Sorting</a></h5>
+    <% end %>
+  </div>
+
+</body>
+</html>
