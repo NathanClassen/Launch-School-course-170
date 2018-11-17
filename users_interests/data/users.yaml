@@ -1,0 +1,40 @@
+---
+:jamy:
+  :email: jamy.rustenburg@gmail.com
+  :interests:
+  - woodworking
+  - cooking
+  - reading
+:nora:
+  :email: nora.alnes@yahoo.com
+  :interests:
+  - cycling
+  - basketball
+  - economics
+:hiroko:
+  :email: hiroko.ohara@hotmail.com
+  :interests:
+  - politics
+  - history
+  - birding
+
+  # YAML.load_file("users.yaml") == 
+
+  {
+  :jamy=>{
+  :email=>"jamy.rustenburg@gmail.com", :interests=>["woodworking", "cooking", "reading"]
+  }, 
+  :nora=>{
+  :email=>"nora.alnes@yahoo.com", :interests=>["cycling", "basketball", "economics"]
+  },
+  :hiroko=>{
+  :email=>"hiroko.ohara@hotmail.com", :interests=>["politics", "history", "birding"]
+}
+}
+
+# nested hash
+# level 1
+#   {user name key
+#   level 2
+#     {email: "example@yahoo.com", interests: ['array', 'of', 'interests']}
+# }

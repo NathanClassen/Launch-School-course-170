@@ -1,0 +1,16 @@
+  <h1> <%= @user_name.capitalize %> </h1>
+  <h2> Email: </h2>
+  <h3> <%= @user_info[:email] %> </h3>
+  <h2> Interests: </h2>
+  <ul>
+    <% @user_info[:interests].each do |interest| %>
+      <li> <%= interest %> </li>
+    <% end %>
+  </ul>
+
+  <h3> Other Users </h3>
+  <ul>
+    <% @other_users.each do |user| %>
+      <li><a href="/<%= user %>"><%= user.capitalize %></a></li>
+    <% end %>
+  </ul>

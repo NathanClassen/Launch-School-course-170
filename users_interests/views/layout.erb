@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users and Interests</title>
+  </head>
+
+  <body>
+    <%= yield %>
+    <h5>There are <%= @file.size %> users with a total of <%= count_interests %> interests</h5>
+    <% if params[:user] %>
+      <h5><a href="/">return home</a></h5>
+    <% end %>
+  </body>
+
+
+
+
+</html>
