@@ -30,6 +30,6 @@ get "/:user" do
   @other_users = @file.keys
   @other_users.delete(@user_name.to_sym)
 
-  erb :user
+  erb :layout, user: layout
 end
 
